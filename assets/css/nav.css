@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  overflow-x: hidden;
+  background-color: #3498db;
+  color: white;
+}
+
+.container {
+  background-color: #f6f7fb;
+  color: black;
+  min-height: 100vh;
+  width: 100vw;
+  padding: 50px;
+  position: relative;
+  z-index: 10;
+}
+.container.show_nav {
+  transform: rotate(-20deg);
+  transform-origin: top left;
+  transition: transform 0.5s linear;
+}
+.container .circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+.container .circle-container .circle {
+  background-color: #3498db;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: relative;
+  transition: all 0.5s linear;
+}
+.container .circle-container .circle__close {
+  position: absolute;
+  display: none;
+  top: 60%;
+  left: 54%;
+  height: 50px;
+  width: 50px;
+  fill: #f6f7fb;
+  cursor: pointer;
+  transform: rotate(15deg);
+  transform-origin: top left;
+}
+.container .circle-container .circle__close:hover {
+  fill: #e0e7ed;
+}
+.container .circle-container .circle__open {
+  position: absolute;
+  top: 57%;
+  left: 54%;
+  height: 50px;
+  width: 50px;
+  fill: #f6f7fb;
+  cursor: pointer;
+}
+.container .circle-container .circle__open:hover {
+  fill: #e0e7ed;
+}
+.container .content {
+  display: flex;
+  margin-top: 10vh;
+  flex-direction: column;
+}
+.container .content__heading {
+  background-color: #3498db;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+.container .content__creator {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.container .content__creator .person {
+  display: flex;
+  align-items: end;
+  padding: 10px;
+  color: #318cca;
+}
+.container .content__creator--img {
+  height: 2vh;
+  width: 2vw;
+  fill: #318cca;
+}
+.container .content__creator--name {
+  margin-left: 2px;
+}
+.container .content__creator--title {
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.container .content__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .content__info--img {
+  max-width: 100%;
+  border-radius: 7px;
+}
+.container .content__info--body {
+  font-size: 20px;
+  font-weight: 300;
+  padding: 10px;
+  text-align: justify;
+}
+
+.navigation {
+  display: flex;
+  position: relative;
+}
+.navigation__list {
+  list-style: none;
+  bottom: 200px;
+  position: fixed;
+  z-index: 1;
+}
+.navigation__list-item {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  z-index: 100;
+  position: relative;
+}
+.navigation__list-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background-color: white;
+  transform: scaleY(0);
+  transition: transform 0.2s, width 0.3s cubic-bezier(1, 0, 0, 1) 0.2s,
+    background-color 0.2s;
+}
+.navigation__list-item:hover {
+  color: #3498db;
+}
+.navigation__list-item:hover::before {
+  transform: scaleY(1);
+  width: 100%;
+}
+.navigation__list-item:hover svg {
+  fill: #3498db;
+}
+.navigation__list-item--img {
+  height: 5vh;
+  width: 5vw;
+  fill: #e0e7ed;
+  z-index: 1;
+}
+.navigation__list-item--name {
+  padding-left: 10px;
+  z-index: 1;
+}
+
+.footer {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  position: fixed;
+  bottom: 0;
+  padding: 20px;
+  background-color: white;
+  z-index: 100;
+}
+.footer .copyright__text {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+.footer .copyright__text svg {
+  height: 2vh;
+  width: 2vw;
+  fill: red;
+  margin: 0 -1px;
+}
+@media (max-width: 574px) {
+  .footer .copyright__text svg {
+    height: 4vh;
+    width: 4vw;
+    margin: 0 5px;
+  }
+}
+.footer .copyright__text a {
+  color: #3498db;
+  text-decoration: none;
+  padding: 0 0.2vw;
+}
+.footer .copyright__text a:hover {
+  color: red;
+}

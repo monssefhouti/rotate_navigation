@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Project3 - Rotate Navigation</title>
+    <link rel="stylesheet" href="assets/css/nav.css" />
+  </head>
+  <body>
+    <!--#region container-->
+    <div class="container">
+      <div class="circle-container">
+        <div class="circle">
+          <svg class="circle__close">
+            <use xlink:href="assets/svg.svg#icon-cross"></use>
+          </svg>
+          <svg class="circle__open">
+            <use xlink:href="assets/svg.svg#icon-menu"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="content">
+        <h1 class="content__heading">New Article</h1>
+        <div class="content__creator">
+          <span class="content__creator--title">The new BMW Car</span>
+          <div class="person">
+            <svg class="content__creator--img">
+              <use xlink:href="assets/svg.svg#icon-user-tie"></use>
+            </svg>
+            <span class="content__creator--name"> ssef Houti</span>
+          </div>
+        </div>
+        <div class="content__info">
+          <img
+            src="https://images.unsplash.com/flagged/photo-1553505192-acca7d4509be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=890&q=80"
+            alt="bmw car"
+            class="content__info--img"
+          />
+          <p class="content__info--body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
+            assumenda blanditiis consectetur esse eveniet expedita fugiat illo
+            ipsam! Impedit laboriosam nostrum repellat sint? Alias aliquam atque
+            blanditiis dignissimos dolores ducimus eos fuga in ipsum libero
+            maxime, minus mollitia nihil numquam quae quis quod, quos soluta vel
+            voluptates! Dolor explicabo, laudantium?
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--#endregion-->
+
+    <nav class="navigation">
+      <ul class="navigation__list">
+        <li class="navigation__list-item">
+          <svg class="navigation__list-item--img">
+            <use xlink:href="assets/svg.svg#icon-home"></use>
+          </svg>
+          <span class="navigation__list-item--name">Home</span>
+        </li>
+
+        <li class="navigation__list-item">
+          <svg class="navigation__list-item--img">
+            <use xlink:href="assets/svg.svg#icon-envelop"></use>
+          </svg>
+          <span class="navigation__list-item--name">About</span>
+        </li>
+
+        <li class="navigation__list-item">
+          <svg class="navigation__list-item--img">
+            <use xlink:href="assets/svg.svg#icon-tree"></use>
+          </svg>
+          <span class="navigation__list-item--name">Contact</span>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="footer">
+      <div class="copyright">
+        <div class="copyright__text">
+          <span>Made with</span>
+          <svg>
+            <use xlink:href="assets/svg.svg#icon-heart"></use>
+          </svg>
+          <span>
+            by
+            <a href="https://github.com/monssefhouti?tab=repositories"
+              >Monssef Houti</a
+            >
+            All Rights Reserved.
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/navigation.js"></script>
+  </body>
+</html>
